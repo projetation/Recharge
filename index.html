@@ -260,7 +260,7 @@
         shareWhatsappBtn.addEventListener('click', () => {
         if(!currentUser) return;
         // ⬇️ ضع رابط موقعك أو رابط استضافتك المباشر هنا مكان الرابط التجريبي
-        const appUrl = "https://projetation.github.io/Recharge/"; 
+        const appUrl = "https://tinyurl.com/IAM-INWI-ORANGE"; 
         const msgText = `لعبة الحظ لي ربحت منها تعبئات وحق الله  🎁 أنا يلاه ربحت منو! دخل وسجل. عافاك دير كود الإحالة ديالي: ${currentUser.myReferralCode} باش يعطيوني هدية التسجيل. رابط التطبيق: ${appUrl}`;
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msgText)}`, '_blank');
     });
