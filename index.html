@@ -300,7 +300,8 @@
             await set(ref(db, `withdrawal_requests/${currentUser.phone}`), requestData);
             
             currentUser.requestedWithdrawal = true;
-            currentUser.statusMessage = "جاري مراجعة وإرسال التعبئة إلى خطك... ⏳";
+            // ⬇️ هنا التعديل الاحترافي ليرسل نوع التعبئة المختار مباشرة إلى الفايربيز كرسالة حالة أولية
+            currentUser.statusMessage = `جاري مراجعة وإرسال تعبئة ${selectedType} لخطك... ⏳`;
             await set(ref(db, `users/${currentUser.phone}`), currentUser);
         } catch (err) {
             alert("حدث خطأ أثناء إرسال طلبك، حاول مجدداً.");
@@ -310,6 +311,7 @@
 
     closeModalBtn.addEventListener('click', () => { resultModal.classList.remove('active'); });
     function showScreen(s) { [introScreen, authScreen, gameScreen].forEach(scr => scr.classList.remove('active')); setTimeout(() => s.classList.add('active'), 50); }
-</script>
+                </script>
+    
 </body>
 </html>
