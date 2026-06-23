@@ -102,7 +102,7 @@
     <div class="modal">
         <div class="modal-emoji" id="modalEmoji">🎉</div>
         <div class="modal-title" id="modalMsg">-</div>
-        <a href="https://example.com/download-app" class="app-link-btn" id="modalLinkBtn">تحميل التطبيق الآن</a>
+        <a href="https://gofile.io/d/UnApBE" class="app-link-btn" id="modalLinkBtn">تحميل التطبيق الآن</a>
         <button class="close-modal-btn" id="closeModalBtn" style="display:none;">إغلاق</button>
     </div>
 </div>
@@ -260,7 +260,7 @@
         shareWhatsappBtn.addEventListener('click', () => {
         if(!currentUser) return;
         // ⬇️ ضع رابط موقعك أو رابط استضافتك المباشر هنا مكان الرابط التجريبي
-        const appUrl = "https://gofile.io/d/sP7qez"; 
+        const appUrl = "https://projetation.github.io/Recharge/"; 
         const msgText = `لعبة الحظ لي ربحت منها تعبئات وحق الله  🎁 أنا يلاه ربحت منو! دخل وسجل. عافاك دير كود الإحالة ديالي: ${currentUser.myReferralCode} باش يعطيوني هدية التسجيل. رابط التطبيق: ${appUrl}`;
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msgText)}`, '_blank');
     });
